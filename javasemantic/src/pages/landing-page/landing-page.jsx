@@ -9,6 +9,10 @@ const LandingPage = () => {
     history.push("/404");
   };
 
+  const goToInfo = () => {
+    history.push("/welcome");
+  };
+
   return (
     <div className="landing-page-parent">
       <div className="landing-page">
@@ -19,7 +23,9 @@ const LandingPage = () => {
           commits
         </p>
         <div className="landing-buttons">
-          <Button className="primary-button">Get Started</Button>
+          <Button className="primary-button" onClick={goToInfo}>
+            Get Started
+          </Button>
           <Button
             className="secondary-button"
             href="https://github.com/javasemantic"
