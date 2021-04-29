@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/javasemantic.github.io/static/css/main.56cda763.chunk.css",
+    "main.js": "/javasemantic.github.io/static/js/main.ae5fe142.chunk.js",
+    "main.js.map": "/javasemantic.github.io/static/js/main.ae5fe142.chunk.js.map",
+    "runtime-main.js": "/javasemantic.github.io/static/js/runtime-main.99b36a77.js",
+    "runtime-main.js.map": "/javasemantic.github.io/static/js/runtime-main.99b36a77.js.map",
+    "static/js/2.6f25d746.chunk.js": "/javasemantic.github.io/static/js/2.6f25d746.chunk.js",
+    "static/js/2.6f25d746.chunk.js.map": "/javasemantic.github.io/static/js/2.6f25d746.chunk.js.map",
+    "index.html": "/javasemantic.github.io/index.html",
+    "static/css/main.56cda763.chunk.css.map": "/javasemantic.github.io/static/css/main.56cda763.chunk.css.map",
+    "static/js/2.6f25d746.chunk.js.LICENSE.txt": "/javasemantic.github.io/static/js/2.6f25d746.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.99b36a77.js",
+    "static/js/2.6f25d746.chunk.js",
+    "static/css/main.56cda763.chunk.css",
+    "static/js/main.ae5fe142.chunk.js"
+  ]
+}

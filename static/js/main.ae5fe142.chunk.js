@@ -1,0 +1,2 @@
+(this.webpackJsonpjavasemantic=this.webpackJsonpjavasemantic||[]).push([[0],{11:function(n,t,e){"use strict";e.r(t);var c=e(1),i=e.n(c),a=e(3),r=e.n(a),s=(e(8),e(9),e(0));var o=function(){return Object(s.jsx)("h1",{children:"Hi!"})};r.a.render(Object(s.jsx)(i.a.StrictMode,{children:Object(s.jsx)(o,{})}),document.getElementById("root"))},8:function(n,t,e){},9:function(n,t,e){}},[[11,1,2]]]);
+//# sourceMappingURL=main.ae5fe142.chunk.js.map
