@@ -1,0 +1,24 @@
+.error-page {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-container {
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 550px;
+  max-height: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+.error-page h1 {
+  text-align: center;
+}
+
+.error-page p {
+  text-align: center;
+}
