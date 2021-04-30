@@ -17,7 +17,9 @@ const CommitEngine = (props) => {
 
   return (
     <InfoPage path={props.location.pathname}>
-      <ReactMarkdown>{mdText}</ReactMarkdown>
+      <ReactMarkdown transformImageUri={(uri) => process.env.PUBLIC_URL + uri}>
+        {mdText}
+      </ReactMarkdown>
     </InfoPage>
   );
 };
