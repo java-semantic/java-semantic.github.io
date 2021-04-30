@@ -1,8 +1,8 @@
 import InfoPage from "../../components/info-page/info-page";
 
-const MavenStartedPage = () => {
+const MavenStartedPage = (props) => {
   return (
-    <InfoPage>
+    <InfoPage path={props.location.pathname}>
       <h1>This Is The MAVEN Getting Started Page</h1>
       <p>
         Here we will tell people how to use our shit, with catagories for Maven

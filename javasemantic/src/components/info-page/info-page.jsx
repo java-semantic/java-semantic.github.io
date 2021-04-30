@@ -6,7 +6,7 @@ const InfoPage = (props) => {
     <div>
       <div className="info-page">
         <div className="sidebar-container">
-          <Sidebar />
+          <Sidebar path={props.path} />
         </div>
         <div className="body-container">{props.children}</div>
       </div>

@@ -1,8 +1,8 @@
 import InfoPage from "../../components/info-page/info-page";
 
-const WelcomePage = () => {
+const WelcomePage = (props) => {
   return (
-    <InfoPage>
+    <InfoPage path={props.location.pathname}>
       <h1>This Is The Welcome Page</h1>
       <p>
         Things wil go here, like, &quot;Hi this is our project boo&quot; but

@@ -3,19 +3,21 @@ import { Navigation } from "react-minimal-side-navigation";
 import "react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css";
 import { useHistory } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ path }) => {
   const history = useHistory();
   const NoRedirectList = ["/started", "/analysis"];
   return (
     <>
       <Navigation
-        activeItemId="/welcome"
+        activeItemId={path}
         onSelect={({ itemId }) => {
-          if (!NoRedirectList.includes(itemId)) history.push(itemId);
+          if (!NoRedirectList.includes(itemId)) {
+            history.push(itemId);
+          }
         }}
         items={[
           {
-            title: "Java Semantic",
+            title: "Home",
             itemId: "/welcome",
           },
           {
