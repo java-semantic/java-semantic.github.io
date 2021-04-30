@@ -24,7 +24,7 @@ A rule represent a part of the commit or commit message that can be assigned a v
 
 The below diagram give a high level design of the engine within a usage context. In addition to just the commit engine the ability of iterating through rules should be given to both structrual / conventional commit validation objects to achieve the same benefits the engine is providing in that validation.
 
-![engine-design-in-context](./.images/engine-design-in-context.png)
+![engine-design-in-context](/.images/engine-design-in-context.png)
 
 ## Acceptance Criteria
 

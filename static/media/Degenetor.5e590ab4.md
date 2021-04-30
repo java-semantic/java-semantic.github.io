@@ -27,7 +27,7 @@ Conventional Commits
 
 ### Example of a Conventional commit
 
-![ConventionalCommitExample](./.images/ConventionalCommitExample.png)
+![ConventionalCommitExample](/.images/ConventionalCommitExample.png)
 
 ### Convention commits structure
 
