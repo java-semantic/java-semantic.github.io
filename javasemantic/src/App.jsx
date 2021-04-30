@@ -3,11 +3,13 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import ErrorPage from "./pages/error-page/error-page";
 import LandingPage from "./pages/landing-page/landing-page";
 import WelcomePage from "./pages/content/welcome-page";
-import MavenStartedPage from "./pages/content/maven-started-page";
-import GradleStartedPage from "./pages/content/gradle-started-page";
-import VersionManager from "./pages/content/version-manager-page";
-import CommitEngine from "./pages/content/commit-engine-page";
-import Degenerator from "./pages/content/degenerator-page";
+import SemanticVersion from "./pages/content/semantic-version-page";
+import ConventionalCommits from "./pages/content/conventional-commits";
+import GitHooks from "./pages/content/git-hook-page";
+import MavenSetup from "./pages/content/maven-setup-page";
+import MavenConfig from "./pages/content/maven-config-page";
+import GradleSetup from "./pages/content/gradle-setup-page";
+import GradleConfig from "./pages/content/gradle-config-page";
 
 function App() {
   return (
@@ -18,15 +20,17 @@ function App() {
 
         {/* Content Paths */}
         <Route exact path="/welcome" component={WelcomePage} />
-        <Route exact path="/started/maven" component={MavenStartedPage} />
-        <Route exact path="/started/gradle" component={GradleStartedPage} />
-        <Route exact path="/analysis/version" component={VersionManager} />
-        <Route exact path="/analysis/commitengine" component={CommitEngine} />
+        <Route exact path="/background/semantic" component={SemanticVersion} />
         <Route
           exact
-          path="/analysis/analysisdegenetor"
-          component={Degenerator}
+          path="/background/commit"
+          component={ConventionalCommits}
         />
+        <Route exact path="/background/githooks" component={GitHooks} />
+        <Route exact path="/started/mavensetup" component={MavenSetup} />
+        <Route exact path="/started/mavenconfig" component={MavenConfig} />
+        <Route exact path="/started/gradlesetup" component={GradleSetup} />
+        <Route exact path="/started/gradleconfig" component={GradleConfig} />
 
         {/* No Match */}
         <Route path="/" component={ErrorPage} />

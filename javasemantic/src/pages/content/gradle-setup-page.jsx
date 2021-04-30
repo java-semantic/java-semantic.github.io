@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
 // this is your .MD file
-import mdFile from "./md/commit_engine.md";
+import mdFile from "./md/gradle-setup.md";
 
-const CommitEngine = (props) => {
+const GradleSetup = (props) => {
   const [mdText, setMdText] = useState();
+
   useEffect(() => {
     fetch(mdFile)
       .then((response) => response.text())
@@ -17,11 +18,9 @@ const CommitEngine = (props) => {
 
   return (
     <InfoPage path={props.location.pathname}>
-      <ReactMarkdown transformImageUri={(uri) => process.env.PUBLIC_URL + uri}>
-        {mdText}
-      </ReactMarkdown>
+      <ReactMarkdown>{mdText}</ReactMarkdown>
     </InfoPage>
   );
 };
 
-export default CommitEngine;
+export default GradleSetup;

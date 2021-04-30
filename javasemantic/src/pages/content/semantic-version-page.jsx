@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
 // this is your .MD file
-import mdFile from "./md/home.md";
+import mdFile from "./md/semantic-version.md";
 
-const WelcomePage = (props) => {
+const SemanticVersion = (props) => {
   const [mdText, setMdText] = useState();
 
   useEffect(() => {
@@ -23,4 +23,4 @@ const WelcomePage = (props) => {
   );
 };
 
-export default WelcomePage;
+export default SemanticVersion;

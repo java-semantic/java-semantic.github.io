@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
 // this is your .MD file
-import mdFile from "./md/version-manager.md";
+import mdFile from "./md/git-hooks.md";
 
-const VersionManager = (props) => {
+const GitHooks = (props) => {
   const [mdText, setMdText] = useState();
 
   useEffect(() => {
@@ -18,11 +18,9 @@ const VersionManager = (props) => {
 
   return (
     <InfoPage path={props.location.pathname}>
-      <ReactMarkdown transformImageUri={(uri) => process.env.PUBLIC_URL + uri}>
-        {mdText}
-      </ReactMarkdown>
+      <ReactMarkdown>{mdText}</ReactMarkdown>
     </InfoPage>
   );
 };
 
-export default VersionManager;
+export default GitHooks;

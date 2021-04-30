@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
 // this is your .MD file
-import mdFile from "./md/Degenetor.md";
+import mdFile from "./md/conventional-commits.md";
 
-const Degenerator = (props) => {
+const ConventionalCommits = (props) => {
   const [mdText, setMdText] = useState();
 
   useEffect(() => {
@@ -18,11 +18,9 @@ const Degenerator = (props) => {
 
   return (
     <InfoPage path={props.location.pathname}>
-      <ReactMarkdown transformImageUri={(uri) => process.env.PUBLIC_URL + uri}>
-        {mdText}
-      </ReactMarkdown>
+      <ReactMarkdown>{mdText}</ReactMarkdown>
     </InfoPage>
   );
 };
 
-export default Degenerator;
+export default ConventionalCommits;

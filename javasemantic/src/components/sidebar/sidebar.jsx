@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 const Sidebar = ({ path }) => {
   const history = useHistory();
-  const NoRedirectList = ["/started", "/analysis"];
+  const NoRedirectList = ["/started", "/background"];
   return (
     <>
       <Navigation
@@ -21,34 +21,42 @@ const Sidebar = ({ path }) => {
             itemId: "/welcome",
           },
           {
-            title: "Getting Started",
-            itemId: "/started",
+            title: "Background",
+            itemId: "/background",
             subNav: [
               {
-                title: "Maven",
-                itemId: "/started/maven",
+                title: "Semantic Version Standard",
+                itemId: "/background/semantic",
               },
               {
-                title: "Gradle",
-                itemId: "/started/gradle",
+                title: "Conventional Commit Standard",
+                itemId: "/background/commit",
+              },
+              {
+                title: "Git Hooks",
+                itemId: "/background/githooks",
               },
             ],
           },
           {
-            title: "Analysis",
-            itemId: "/analysis",
+            title: "Getting Started",
+            itemId: "/started",
             subNav: [
               {
-                title: "Version Manager",
-                itemId: "/analysis/version",
+                title: "Maven Setup",
+                itemId: "/started/mavensetup",
               },
               {
-                title: "Commit Engine",
-                itemId: "/analysis/commitengine",
+                title: "Maven Config",
+                itemId: "/started/mavenconfig",
               },
               {
-                title: "Analysis Degenetor",
-                itemId: "/analysis/analysisdegenetor",
+                title: "Gradle Setup",
+                itemId: "/started/gradlesetup",
+              },
+              {
+                title: "Gradle Config",
+                itemId: "/started/gradleconfig",
               },
             ],
           },
