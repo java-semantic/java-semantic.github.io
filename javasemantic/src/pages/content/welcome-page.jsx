@@ -1,6 +1,7 @@
 import InfoPage from "../../components/info-page/info-page";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 // this is your .MD file
 import mdFile from "./md/home.md";
@@ -18,7 +19,7 @@ const WelcomePage = (props) => {
 
   return (
     <InfoPage path={props.location.pathname}>
-      <ReactMarkdown>{mdText}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>{mdText}</ReactMarkdown>
     </InfoPage>
   );
 };
