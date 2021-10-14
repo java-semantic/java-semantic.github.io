@@ -1,223 +1,75 @@
-## Semantic Version
+# Semantic Versioning 
 
-# h1 Heading 8-)
+## What is Semantic versioning?
 
-## h2 Heading
+Semantic versioning is the practice of using version numbers to convey the level of change included in the release being versioned. In the practice, the version number allows the user of the software released to easily and quickly understand the nature of the change made and how it effects the software that depends on it.
 
-### h3 Heading
+## Structure of semantic versions
 
-#### h4 Heading
+Say a software package is versioned using a 3 number system of x.y.z where X indicates the major version, y indicates the minor version and z indicates the patch version. 
 
-##### h5 Heading
+Different levels of code changes, alas known as 'type', effect the appropriate version number in the version of the release as follows. 
 
-###### h6 Heading
+| Type            | Version Number to increment |
+| --------------- | --------------------------- |
+| feat            | minor                       |
+| refactor        | patch                       |
+| perf            | patch                       |
+| fix             | patch                       |
+| chore           | patch                       |
+| revert          | patch                       |
+| docs            | patch                       |
+| style           | -                           |
+| test            | -                           |
+| build           | patch                       |
+| ci              | patch                       |
+| breaking change | major                       |
+| deprecated      | major                       |
 
-## Horizontal Rules
+More information on the Types can be found under "Conventional Commits"
 
----
+## Hierarchy of version numbers
 
----
+When a change with a type corresponding to a "patch" change is applied, the the "patch" version number number is incremented and the "major" and "minor" version number are left unchanged 
 
----
+When a change with a type corresponding to a "minor" change is applied, the "patch" version number is reset to 0, the "minor" version number is incremented and the "major" version number is left unchanged. 
 
-## Typographic replacements
+When a change with a type corresponding to a "major" change is applied, the "patch" and "minor" version numbers are reset to 0 and the "major" version number is incremented.
 
-Enable typographer option to see result.
+### Example 
 
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+A product of version 12.3.45 is released
 
-test.. test... test..... test?..... test!....
+A fix is applied to the product. 
+The new version becomes: 12.3.46
 
-!!!!!! ???? ,, -- ---
+A feat is applied to the product. 
+The new version number becomes: 12.4.0
 
-"Smartypants, double quotes" and 'single quotes'
+A breaking change is applied to the product.
+The new version number becomes: 13.0.0
 
-## Emphasis
+A refactor is applied to the product. 
+The new version number becomes: 13.0.1
 
-**This is bold text**
+A feat is applied to the product. 
+The new version number becomes: 13.1.0 
 
-**This is bold text**
+In this way it is to see, given the previous and new version, what level of change the product has undergone. 
 
-_This is italic text_
 
-_This is italic text_
+## Benefits of Semantic Versioning 
 
-~~Strikethrough~~
+Dependency management in a software product can quickly become a messy task with 2 major issued quickly arising. 
 
-## Blockquotes
+The first issue is knows as "Dependency Lock". This is the state of not being able to release a new version of a product without also releasing new versions of all the products that the product in question depends on. This arises as a result of too tightly specifying the versions of dependencies of a product. 
 
-> Blockquotes can also be nested...
->
-> > ...by using additional greater-than signs right next to each other...
-> >
-> > > ...or with spaces between arrows.
+The second issue is knows as "version promiscuity". This is the state of assuming compatibility with too many future versions of a product than is reasonable possible. This arises as a result of too loosly specifying the versions of dependencies of a product.
 
-## Lists
+Semantic versioning provides a rule set (as specified above) to indicate the nature of a change of a dependency and therefore allow a user to decide when a dependency release is not compatible with the product depending on it. 
 
-Unordered
+Semantic versioning is only of benefit to a user when it is strictly applied to releases of a product. A failure to correctly update the version of a product could lead to catastrophic failure of the products that depend on it. 
 
-- Create a list by starting a line with `+`, `-`, or `*`
-- Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    - Ac tristique libero volutpat at
-    * Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-- Very easy!
 
-Ordered
 
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
 
-4. You can use sequential numbers...
-5. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-```js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
-
-## Tables
-
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
-
-Right aligned columns
-
-| Option |                                                               Description |
-| -----: | ------------------------------------------------------------------------: |
-|   data | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|    ext |                                      extension to be used for dest files. |
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
-
-## Images
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
-
-## Plugins
-
-The killer feature of `markdown-it` is very effective support of
-[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
-
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
-
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
-
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19^th^
-- H~2~O
-
-### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
-
-++Inserted text++
-
-### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
-
-==Marked text==
-
-### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
-
-Footnote 1 link[^first].
-
-Footnote 2 link[^second].
-
-Inline footnote^[Text of inline footnote] definition.
-
-Duplicated footnote reference[^second].
-
-[^first]: Footnote **can have markup**
-
-    and multiple paragraphs.
-
-[^second]: Footnote text.
-
-### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
-
-Term 1
-
-: Definition 1
-with lazy continuation.
-
-Term 2 with _inline markup_
-
-: Definition 2
-
-        { some code, part of Definition 2 }
-
-    Third paragraph of definition 2.
-
-_Compact style:_
-
-Term 1
-~ Definition 1
-
-Term 2
-~ Definition 2a
-~ Definition 2b
-
-### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
-
-This is HTML abbreviation example.
-
-It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
-
-\*[HTML]: Hyper Text Markup Language
-
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-::: warning
-_here be dragons_
-:::
